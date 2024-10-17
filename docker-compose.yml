@@ -1,0 +1,17 @@
+services:
+  iac_website:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      no_cache: true
+    image: hotel
+    ports:
+    - 3000:80
+    hostname: hotel_websitw
+    container_name: hotel_website
+    volumes: 
+    - hotel_data:/opt/app
+volumes:
+  hotel_data:
+  
+
